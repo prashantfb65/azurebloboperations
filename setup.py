@@ -4,8 +4,8 @@ import os
 from setuptools import setup
 from setuptools import find_packages
 
-PACKAGES = ['uploadfundrequest'] + list(map(lambda s: 'uploadfundrequest.' +
-                                                     s, find_packages('uploadfundrequest')))
+PACKAGES = ['azurebloboperations'] + list(map(lambda s: 'azurebloboperations.' +
+                                                     s, find_packages('azurebloboperations')))
 
 # packages not part of the stdlib
 SETUP_REQUIRES = [
@@ -33,7 +33,7 @@ PACKAGE_DATA = {}
 about = {}
 
 cwd = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(cwd, 'uploadfundrequest', '__version__.py'), 'r') as f:
+with open(os.path.join(cwd, 'azurebloboperations', '__version__.py'), 'r') as f:
     exec(f.read(), about)
 
 # assume availability of setuptools
@@ -46,7 +46,7 @@ setup(
     url=about['__url__'],
     license=about['__license__'],
     python_requires=">=3.6.*",
-    package_dir={'uploadfundrequest': 'uploadfundrequest'},
+    package_dir={'azurebloboperations': 'azurebloboperations'},
     packages=PACKAGES,
     package_data=PACKAGE_DATA,
     setup_requires=SETUP_REQUIRES,
@@ -55,7 +55,7 @@ setup(
     tests_require=TESTS_REQUIRE,
     entry_points={
         'console_scripts': [
-            'uploadfr=uploadfundrequest.__main__:main'
+            'azop=azurebloboperations.__main__:main'
         ]
     },
     zip_safe=False
