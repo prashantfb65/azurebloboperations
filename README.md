@@ -15,7 +15,7 @@ az login
 ```bash
 az account set --subscription `subscription_name`
 ```
-Variables to replace:
+**Variables to replace**
 
 `subscription_name`
 
@@ -23,7 +23,7 @@ Variables to replace:
 ```bash
 az group create --name `resource_group` --location `location`
 ```
-Variables to replace:
+**Variables to replace**
 
 `resource_group`
 
@@ -34,7 +34,8 @@ Variables to replace:
 az storage account create --name `storage_account` --resource-group `resource_group` \
 --location `location` --sku Standard_RAGRS --kind StorageV2
 ```
-Variables to replace:
+
+**Variables to replace**
 
 `storage_account`
 
