@@ -13,19 +13,19 @@ az login
 
 - Select a subscription which will be used to create a resource group
 ```bash
-az account set --subscription `subscription_name`
+az account set --subscription \`subscription_name\`
 ```
 
 - Create a resource group 
 ```bash
-az group create --name `resource_group e.g. resource-example` --location \
-`location e.g. northeurope`
+az group create --name \`resource_group e.g. resource-example\` --location \
+\`location e.g. northeurope\`
 ```
 
 - Create the storage account 
 ```bash
-az storage account create --name `storage_account e.g. storeaccount` --resource-group \
-`resource_group e.g. resource-example` --location `location e.g. northeurope` \
+az storage account create --name \`storage_account e.g. storeaccount\` --resource-group \
+\`resource_group e.g. resource-example\` --location \`location e.g. northeurope\` \
 --sku Standard_RAGRS --kind StorageV2
 ```
 
