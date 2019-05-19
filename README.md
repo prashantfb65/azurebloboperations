@@ -16,6 +16,7 @@ az login
 az account set --subscription `subscription_name`
 ```
 Variables to replace:
+
 `subscription_name`
 
 - Create a resource group 
@@ -23,7 +24,9 @@ Variables to replace:
 az group create --name `resource_group` --location `location`
 ```
 Variables to replace:
+
 `resource_group`
+
 `location`: e.g. northeurope
 
 - Create the storage account 
@@ -32,7 +35,10 @@ az storage account create --name `storage_account` --resource-group `resource_gr
 --location `location` --sku Standard_RAGRS --kind StorageV2
 ```
 Variables to replace:
+
 `storage_account`
+
 `resource_group`
+
 `location`: e.g. northeurope
 
