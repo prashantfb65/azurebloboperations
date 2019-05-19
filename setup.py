@@ -4,8 +4,7 @@ import os
 from setuptools import setup
 from setuptools import find_packages
 
-PACKAGES = ['azurebloboperations'] + list(map(lambda s: 'azurebloboperations.' +
-                                                     s, find_packages('azurebloboperations')))
+PACKAGES = ['azurebloboperations'] + list(map(lambda s: 'azurebloboperations.' + s, find_packages('azurebloboperations')))
 
 # packages not part of the stdlib
 SETUP_REQUIRES = [
@@ -17,7 +16,8 @@ DEPENDENCY_LINKS = []
 
 if os.environ.get('IMAGE_NAME', None) is None:
     INSTALL_REQUIRES = [
-
+        'azure-storage-blob',
+        'azure-storage-common'
     ]
 
     DEPENDENCY_LINKS = [
@@ -53,10 +53,5 @@ setup(
     install_requires=INSTALL_REQUIRES,
     dependency_links=DEPENDENCY_LINKS,
     tests_require=TESTS_REQUIRE,
-    entry_points={
-        'console_scripts': [
-            'azop=azurebloboperations.__main__:main'
-        ]
-    },
     zip_safe=False
 )
