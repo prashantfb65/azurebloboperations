@@ -122,3 +122,21 @@ class AzureBlobOperations(object):
             raise Exception(f'Problem while deleting the file '
                             f' {file_name} from Azure, '
                             f'container {self._container_name}') from error
+
+
+if __name__ == '__main__':
+    account_name = os.environ['AZ_ACCOUNT_NAME']
+    account_key = os.environ['AZ_ACCOUNT_KEY']
+    container_name = os.environ['AZ_CONTAINER_NAME']
+    azops = AzureBlobOperations(account_name=account_name,
+                                account_key=account_key,
+                                container_name=container_name)
+
+    # upload a file to azure blob
+    file_path = ''  # insert file path here
+    file_name = ''  # insert file name here
+    download_path = ''  # path where you want to download the file to
+
+    # Uncomment the below for different operations:
+    # azops.upload_file_to_blob(file_path=file_path)
+    # azops.download_file_from_blob(file_name, download_path=download_path)

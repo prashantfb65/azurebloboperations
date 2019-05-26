@@ -43,3 +43,23 @@ az storage account create --name `storage_account` --resource-group `resource_gr
 
 `location`: e.g. northeurope
 
+
+## Setup the environment
+
+```bash
+. ./setup-env.shß
+```
+
+```bash
+pip install -r requirements.txt
+```
+
+Setup three values in the environment
+
+```bash
+account_name
+
+account_key
+
+container_name
+```
